@@ -1,2 +1,5 @@
 1. Cover picture of Pinjre ka Qaidi book
 2. New webpage/home page for Author details
+3. Make folder for all images
+4. Cleanup code
+
