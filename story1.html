@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Home</title>
+
+  <!-- CSS  -->
+  <!--html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <style>
+    .pdf-container {
+            margin-top: 20px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        embed {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+  </style>
+</head>
+
+<body>
+<!-- NAVIGATION BAR  -->
+  <nav class="teal" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo" >Quamar Jahan</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#about">About the Writer</a></li>
+        <li><a href="#Stories">Stories</a></li>
+        <li><a href="#Articles">Articles</a></li>
+        <li><a href="#Critical_Articles">Critical Articles</a></li>
+      </ul>
+
+      <!-- MOBILE NAV BAR  -->
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#about">About the Writer</a></li>
+        <li><a href="#Stories">Stories</a></li>
+        <li><a href="#Articles">Articles</a></li>
+        <li><a href="#Critical_Articles">Critical Articles</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <main>
+    <section>
+        <div class="container">
+            <div id="pdf-container" class="row justify-content-center">
+                <h4 class="text-left mt-5">Pinjre ka Qaidi</h4>
+                <p class="text-left">A collection of short stories published in 2015</p>
+                <div class="col-md-8">
+                    <!-- Embed tag without src attribute -->
+                    <embed type="application/pdf"></embed>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- FOOTER  -->
+<footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About</h5>
+          <p class="grey-text text-lighten-4">About the project</p>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect with me</h5>
+          <ul>
+            <li><img src="linkedin-circled.png" height="20px" width="20px"><a class="white-text" href="https://www.linkedin.com/in/shaheer14hasan/">LinkedIn</a></li>
+            <li><img src="github.png" height="20px" width="20px"><a class="white-text" href="https://github.com/Shaheer-rossoneri14">GitHub</a></li>
+            <li><img src="circled-envelope.png" height="20px" width="20px"><a class="white-text" href="mailto:hshaheer99@gmail.com">E-Mail</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="black-text text-dark-3"><strong>Shaheer Hasan</strong></a>
+      </div>
+    </div>
+  </footer>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="scripts.js"></script>
+  </body>
+</html>

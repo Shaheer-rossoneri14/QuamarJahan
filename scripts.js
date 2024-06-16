@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // List of PDF files
     const pdfFiles = [
-        { name: "Story 1", url: "pdf/Story1.pdf" },
+        { name: "Pinjre ka Qaidi", url: "pdf/Pinjre_ka_Qaidi.pdf" },
     ];
 
     // Embed PDF files dynamically
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         embed.src = pdf.url;
         embed.type = "application/pdf";
         embed.width = "100%";
-        embed.height = "700px"; // Set the height as per your requirement
+        embed.height = "1240px"; // Set the height as per your requirement
         embed.setAttribute("frameborder", "1");
         pdfContainer.appendChild(embed);
     });

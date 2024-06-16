@@ -1,0 +1,9 @@
+/* styles.css */
+#pdf-container {
+    margin-top: 10%;
+}
+
+embed {
+    /*display: block;*/
+    margin-bottom: 10%;
+}
