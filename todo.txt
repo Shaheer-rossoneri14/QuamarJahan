@@ -1,5 +1,8 @@
-1. Cover picture of Pinjre ka Qaidi book
-2. New webpage/home page for Author details
-3. Make folder for all images
-4. Cleanup code
+Cover picture of Pinjre ka Qaidi book
+New webpage/home page for Author details -- Done
+Add introduction for dadi in about author page -- Done
+Make folder for all images
+Cleanup code -- In-fix
+New Story -- To-do
+Improve UI
 
