@@ -5,4 +5,5 @@ Make folder for all images
 Cleanup code -- In-fix
 New Story -- To-do
 Improve UI
+Reorder About Author Page
 
