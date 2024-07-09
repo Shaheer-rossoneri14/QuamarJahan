@@ -1,9 +1,6 @@
-Cover picture of Pinjre ka Qaidi book
+Cover picture of Pinjre ka Qaidi book -- Todo
 New webpage/home page for Author details -- Done
 Add introduction for dadi in about author page -- Done
-Make folder for all images
-Cleanup code -- In-fix
-New Story -- To-do
-Improve UI
-Reorder About Author Page
-
+Make folder for all images -- Done
+Consider gdrive and iframe to display story (zoom feature available and faster load time) -- Done
+New Story -- Todo
