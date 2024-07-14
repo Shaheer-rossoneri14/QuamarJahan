@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Home Page tests', () => {
   test('Navbar links on Home page are correct on desktop', async ({ page }) => {
-    await page.goto('https://quamarjahan.vercel.app/');
+    await page.goto('https://quamar-jahan.vercel.app/');
 
     // Check the "About the Author" link in the desktop navbar
     const aboutAuthorLink = page.locator('.right.hide-on-med-and-down a', { hasText: 'About the Author' });
@@ -28,7 +28,7 @@ test.describe('Home Page tests', () => {
   });
 
   test('Mobile navbar links on Home page are correct', async ({ page }) => {
-    await page.goto('https://quamarjahan.vercel.app/');
+    await page.goto('https://quamar-jahan.vercel.app/');
 
     // Check the "About the Author" link in the mobile navbar
     const aboutAuthorLinkMobile = page.locator('#nav-mobile a', { hasText: 'About the Author' });
@@ -55,18 +55,24 @@ test.describe('Home Page tests', () => {
     // Test data
     const expectedCards = [
       {
-        imageUrl: 'images/story1.png',
+        imageUrl: 'images/PinjreKaQaidi2.png',
         imageLinkHref: 'story1.html',
         cardTitle: 'Pinjre ka Qaidi',
         cardTitleHref: 'story1.html',
-        cardContent: 'A collection of short stories published in 2015'
+        cardContent: 'A collection of short stories published in 1995'
       },
-
+      {
+        imageUrl: 'images/Charahgar2.png',
+        imageLinkHref: 'story2.html',
+        cardTitle: 'Charahgar',
+        cardTitleHref: 'story2.html',
+        cardContent: 'A collection of short stories published in 1983'
+      },
       // Add more expected cards as needed
     ];
 
     // Test
-    await page.goto('https://quamarjahan.vercel.app/');
+    await page.goto('https://quamar-jahan.vercel.app/');
 
     // Locate all cards
     const cards = page.locator('.card');
@@ -109,9 +115,10 @@ test.describe('Home Page tests', () => {
   });
 
   test('Navigating to story and coming back to home page', async ({ page }) => {
-    await page.goto('https://quamarjahan.vercel.app/');
+    await page.goto('https://quamar-jahan.vercel.app/');
     const linksToValidate = [
       { linkText: 'Pinjre ka Qaidi', expectedHref: 'story1.html' },
+      { linkText: 'Charahgar', expectedHref: 'story2.html' },
       // Add more objects as needed
     ];
 
@@ -138,7 +145,7 @@ test.describe('Home Page tests', () => {
 
 test.describe('About Author Page tests', () => {
   test('Navbar links on About Author page are correct on desktop', async ({ page }) => {
-    await page.goto('https://quamarjahan.vercel.app/');
+    await page.goto('https://quamar-jahan.vercel.app/');
     await page.getByRole('link', { name: 'About the Author' }).first().click();
 
     // Check the "About the Author" link in the desktop navbar
@@ -164,7 +171,7 @@ test.describe('About Author Page tests', () => {
   });
 
   test('Mobile navbar links on About Author page are correct', async ({ page }) => {
-    await page.goto('https://quamarjahan.vercel.app/');
+    await page.goto('https://quamar-jahan.vercel.app/');
     await page.getByRole('link', { name: 'About the Author' }).first().click();
 
     // Check the "About the Author" link in the mobile navbar
