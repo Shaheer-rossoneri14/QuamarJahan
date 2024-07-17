@@ -12,6 +12,36 @@
     body {
       background-color: #eceff1;
     }
+
+    .heading-with-image {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      /* Adjusted to push image to the right */
+      margin-bottom: 20px;
+    }
+
+    .heading-with-image h3 {
+      margin-right: 20px;
+    }
+
+    .profile-image {
+      height: auto;
+      max-height: 200px;
+      /* Adjust height as needed */
+    }
+
+    @media screen and (max-width: 600px) {
+      .heading-with-image {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .heading-with-image h3 {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
   </style>
 </head>
 
@@ -41,7 +71,10 @@
   <!-- ABOUT SECTION  -->
   <div class="container">
     <div class="section">
-      <h3 class="red-text">Prof. Quamar Jahan: A Luminary in Urdu Literature</h3>
+      <div class="heading-with-image">
+        <h3 class="red-text">Prof. Quamar Jahan: A Luminary in Urdu Literature</h3>
+        <img src="images/Dadi_potrait.png" alt="Prof. Quamar Jahan" class="profile-image">
+      </div>
       <div class="divider"></div>
       <br>
       <h5>Early Life and Education</h5>

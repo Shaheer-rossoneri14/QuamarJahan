@@ -193,6 +193,17 @@ test.describe('About Author Page tests', () => {
     await expect(criticalArticlesLinkMobile).toBeVisible();
     await expect(criticalArticlesLinkMobile).toHaveAttribute('href', '#Critical_Articles');
   });
+
+  test('Content in page is correct', async ({ page }) => {
+    await page.goto('https://quamar-jahan.vercel.app/');
+    await page.getByRole('link', { name: 'About the Author' }).first().click();
+
+    const expectedProfileImageUrl = 'images/Dadi_potrait.png'
+    const aboutPageHeadingText = 'Prof. Quamar Jahan: A Luminary in Urdu Literature'
+    const imageUrl = await page.locator('.profile-image').getAttribute('src');
+    await expect(imageUrl).toBe(expectedProfileImageUrl);
+    const header = (page.getByRole('heading', { name: aboutPageHeadingText }))
+  })
 });
 
 test.describe('Story page tests', () => {
