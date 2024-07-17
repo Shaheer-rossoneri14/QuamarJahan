@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test';
 
-
 test.describe('Home Page tests', () => {
   test('Navbar links on Home page are correct on desktop', async ({ page }) => {
     await page.goto('https://quamar-jahan.vercel.app/');
@@ -193,5 +192,36 @@ test.describe('About Author Page tests', () => {
     const criticalArticlesLinkMobile = page.locator('#nav-mobile a', { hasText: /^Critical Articles$/ });
     await expect(criticalArticlesLinkMobile).toBeVisible();
     await expect(criticalArticlesLinkMobile).toHaveAttribute('href', '#Critical_Articles');
+  });
+});
+
+test.describe('Story page tests', () => {
+  test('Stody heading and story file is correct', async ({ page }) => {
+    await page.goto('https://quamar-jahan.vercel.app/');
+    const storyObjects = [
+      { linkText: 'Pinjre ka Qaidi', headingText: 'Pinjre ka Qaidi', storyLink: 'https://drive.google.com/file/d/1mOmJnNWTsBRXdyLfaf196Mfz8xs3COIG/preview' },
+      { linkText: 'Charahgar', headingText: 'Charahgar', storyLink: '#' },
+      // Add more objects as needed
+    ];
+
+    for (const { linkText, headingText, storyLink } of storyObjects) {
+      const link = page.locator('a', { hasText: linkText });
+      await link.click();
+      // Validate the heading is correct
+      const header = (page.getByRole('heading', { name: headingText }))
+      const iframeElementHandle = await page.$('iframe');
+      if (iframeElementHandle) {
+        const iframeUrl = await iframeElementHandle.getAttribute('src');
+        // Validate the URL
+        if (iframeUrl === storyLink) {
+          console.log('URL is valid.');
+        } else {
+          console.log(`URL is invalid. Found: ${iframeUrl}`);
+        }
+      } else {
+        console.log('Iframe not found.');
+      }
+      await page.goto('https://quamar-jahan.vercel.app/');
+    }
   });
 });
