@@ -70,13 +70,8 @@ test.describe('Home Page tests', () => {
       // Add more expected cards as needed
     ];
 
-    // Test
     await page.goto('https://quamar-jahan.vercel.app/');
-
-    // Locate all cards
     const cards = page.locator('.card');
-
-    // Get the count of cards
     const count = await cards.count();
 
     for (let i = 0; i < count; i++) {
