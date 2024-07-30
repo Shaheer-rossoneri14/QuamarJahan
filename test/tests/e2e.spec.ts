@@ -54,7 +54,7 @@ test.describe('Home Page tests', () => {
     // Test data
     const expectedCards = [
       {
-        imageUrl: 'images/PinjreKaQaidi2.png',
+        imageUrl: 'images/PinjreKaQaidi1.png',
         imageLinkHref: 'story1.html',
         cardTitle: 'Pinjre ka Qaidi',
         cardTitleHref: 'story1.html',
