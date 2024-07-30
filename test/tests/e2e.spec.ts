@@ -58,7 +58,7 @@ test.describe('Home Page tests', () => {
         imageLinkHref: 'story1.html',
         cardTitle: 'Pinjre ka Qaidi',
         cardTitleHref: 'story1.html',
-        cardContent: 'A collection of short stories published in 1995'
+        cardContent: 'A collection of short stories published in 2015'
       },
       {
         imageUrl: 'images/Charahgar2.png',
