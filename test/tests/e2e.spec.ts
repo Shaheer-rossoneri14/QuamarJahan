@@ -37,7 +37,7 @@ test.describe('Stories Page tests', () => {
     // Check the "Stories" link in the mobile navbar
     const storiesLinkMobile = page.locator('#nav-mobile a', { hasText: 'Stories' });
     await expect(storiesLinkMobile).toBeVisible();
-    await expect(storiesLinkMobile).toHaveAttribute('href', '/index.html');
+    await expect(storiesLinkMobile).toHaveAttribute('href', '/stories.html');
 
     // Check the "Articles" link in the mobile navbar
     const articlesLinkMobile = page.locator('#nav-mobile a', { hasText: /^Articles$/ });
@@ -150,7 +150,7 @@ test.describe('Home Page tests', () => {
     // Check the "Stories" link in the desktop navbar
     const storiesLink = page.locator('.right.hide-on-med-and-down a', { hasText: 'Stories' });
     await expect(storiesLink).toBeVisible();
-    await expect(storiesLink).toHaveAttribute('href', '/index.html');
+    await expect(storiesLink).toHaveAttribute('href', '/stories.html');
 
     // Check the "Articles" link in the desktop navbar
     const articlesLink = page.locator('.right.hide-on-med-and-down a', { hasText: /^Articles$/ });
@@ -176,7 +176,7 @@ test.describe('Home Page tests', () => {
     // Check the "Stories" link in the mobile navbar
     const storiesLinkMobile = page.locator('#nav-mobile a', { hasText: 'Stories' });
     await expect(storiesLinkMobile).toBeVisible();
-    await expect(storiesLinkMobile).toHaveAttribute('href', '/index.html');
+    await expect(storiesLinkMobile).toHaveAttribute('href', '/stories.html');
 
     // Check the "Articles" link in the mobile navbar
     const articlesLinkMobile = page.locator('#nav-mobile a', { hasText: /^Articles$/ });
