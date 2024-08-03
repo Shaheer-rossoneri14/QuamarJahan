@@ -1,13 +1,13 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Home Page tests', () => {
-  test('Navbar links on Home page are correct on desktop', async ({ page }) => {
+test.describe('Stories Page tests', () => {
+  test('Navbar links on Stories page are correct on desktop', async ({ page }) => {
     await page.goto('https://quamar-jahan.vercel.app/');
 
-    // Check the "About the Author" link in the desktop navbar
-    const aboutAuthorLink = page.locator('.right.hide-on-med-and-down a', { hasText: 'About the Author' });
-    await expect(aboutAuthorLink).toBeVisible();
-    await expect(aboutAuthorLink).toHaveAttribute('href', '/aboutAuthor.html');
+    // Check the "Home" link in the desktop navbar
+    const homeLink = page.locator('.right.hide-on-med-and-down a', { hasText: 'Home' });
+    await expect(homeLink).toBeVisible();
+    await expect(homeLink).toHaveAttribute('href', '/index.html');
 
     // Check the "Stories" link in the desktop navbar
     const storiesLink = page.locator('.right.hide-on-med-and-down a', { hasText: 'Stories' });
@@ -26,13 +26,13 @@ test.describe('Home Page tests', () => {
     await page.screenshot({ path: 'ss/homePage1.png', fullPage: true });
   });
 
-  test('Mobile navbar links on Home page are correct', async ({ page }) => {
+  test('Mobile navbar links on Stories page are correct', async ({ page }) => {
     await page.goto('https://quamar-jahan.vercel.app/');
 
-    // Check the "About the Author" link in the mobile navbar
-    const aboutAuthorLinkMobile = page.locator('#nav-mobile a', { hasText: 'About the Author' });
-    await expect(aboutAuthorLinkMobile).toBeVisible();
-    await expect(aboutAuthorLinkMobile).toHaveAttribute('href', '/aboutAuthor.html');
+    // Check the "Home" link in the mobile navbar
+    const homeLinkMobile = page.locator('#nav-mobile a', { hasText: 'Home' });
+    await expect(homeLinkMobile).toBeVisible();
+    await expect(homeLinkMobile).toHaveAttribute('href', '/index.html');
 
     // Check the "Stories" link in the mobile navbar
     const storiesLinkMobile = page.locator('#nav-mobile a', { hasText: 'Stories' });
@@ -137,15 +137,15 @@ test.describe('Home Page tests', () => {
   });
 });
 
-test.describe('About Author Page tests', () => {
-  test('Navbar links on About Author page are correct on desktop', async ({ page }) => {
+test.describe('Home Page tests', () => {
+  test('Navbar links on Home page are correct on desktop', async ({ page }) => {
     await page.goto('https://quamar-jahan.vercel.app/');
-    await page.getByRole('link', { name: 'About the Author' }).first().click();
+    await page.getByRole('link', { name: 'Home' }).first().click();
 
-    // Check the "About the Author" link in the desktop navbar
-    const aboutAuthorLink = page.locator('.right.hide-on-med-and-down a', { hasText: 'About the Author' });
-    await expect(aboutAuthorLink).toBeVisible();
-    await expect(aboutAuthorLink).toHaveAttribute('href', '/aboutAuthor.html');
+    // Check the "Home" link in the desktop navbar
+    const homeLink = page.locator('.right.hide-on-med-and-down a', { hasText: 'Home' });
+    await expect(homeLink).toBeVisible();
+    await expect(homeLink).toHaveAttribute('href', '/index.html');
 
     // Check the "Stories" link in the desktop navbar
     const storiesLink = page.locator('.right.hide-on-med-and-down a', { hasText: 'Stories' });
@@ -161,17 +161,17 @@ test.describe('About Author Page tests', () => {
     const criticalArticlesLink = page.locator('.right.hide-on-med-and-down a', { hasText: /^Critical Articles$/ });
     await expect(criticalArticlesLink).toBeVisible();
     await expect(criticalArticlesLink).toHaveAttribute('href', '#Critical_Articles');
-    await page.screenshot({ path: 'ss/aboutAuthor1.png', fullPage: true });
+    await page.screenshot({ path: 'ss/Home1.png', fullPage: true });
   });
 
-  test('Mobile navbar links on About Author page are correct', async ({ page }) => {
+  test('Mobile navbar links on Home page are correct', async ({ page }) => {
     await page.goto('https://quamar-jahan.vercel.app/');
-    await page.getByRole('link', { name: 'About the Author' }).first().click();
+    await page.getByRole('link', { name: 'Home' }).first().click();
 
-    // Check the "About the Author" link in the mobile navbar
-    const aboutAuthorLinkMobile = page.locator('#nav-mobile a', { hasText: 'About the Author' });
-    await expect(aboutAuthorLinkMobile).toBeVisible();
-    await expect(aboutAuthorLinkMobile).toHaveAttribute('href', '/aboutAuthor.html');
+    // Check the "Home" link in the mobile navbar
+    const homeLinkMobile = page.locator('#nav-mobile a', { hasText: 'Home' });
+    await expect(homeLinkMobile).toBeVisible();
+    await expect(homeLinkMobile).toHaveAttribute('href', '/index.html');
 
     // Check the "Stories" link in the mobile navbar
     const storiesLinkMobile = page.locator('#nav-mobile a', { hasText: 'Stories' });
@@ -191,7 +191,7 @@ test.describe('About Author Page tests', () => {
 
   test('Content in page is correct', async ({ page }) => {
     await page.goto('https://quamar-jahan.vercel.app/');
-    await page.getByRole('link', { name: 'About the Author' }).first().click();
+    await page.getByRole('link', { name: 'Home' }).first().click();
 
     const expectedProfileImageUrl = 'images/Dadi_potrait.png'
     const aboutPageHeadingText = 'Prof. Quamar Jahan: A Luminary in Urdu Literature'
