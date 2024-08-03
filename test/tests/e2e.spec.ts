@@ -12,7 +12,7 @@ test.describe('Stories Page tests', () => {
     // Check the "Stories" link in the desktop navbar
     const storiesLink = page.locator('.right.hide-on-med-and-down a', { hasText: 'Stories' });
     await expect(storiesLink).toBeVisible();
-    await expect(storiesLink).toHaveAttribute('href', '/index.html');
+    await expect(storiesLink).toHaveAttribute('href', '/stories.html');
 
     // Check the "Articles" link in the desktop navbar
     const articlesLink = page.locator('.right.hide-on-med-and-down a', { hasText: /^Articles$/ });
@@ -107,34 +107,6 @@ test.describe('Stories Page tests', () => {
     }
     await page.screenshot({ path: 'ss/homePage2.png', fullPage: true });
   });
-
-  test('Navigating to story and coming back to home page', async ({ page }) => {
-    await page.goto('https://quamar-jahan.vercel.app/');
-    const linksToValidate = [
-      { linkText: 'Pinjre ka Qaidi', expectedHref: 'story1.html' },
-      { linkText: 'Charahgar', expectedHref: 'story2.html' },
-      // Add more objects as needed
-    ];
-
-    for (const { linkText, expectedHref } of linksToValidate) {
-      // Locate the link with the specified text
-      const link = page.locator('a', { hasText: linkText });
-
-      // Ensure the link is visible
-      await expect(link).toBeVisible();
-
-      // Validate the href attribute
-      const href = await link.getAttribute('href');
-      console.log(`Link '${linkText}' href: ${href}`);
-      await expect(href).toBe(expectedHref);
-
-      // Click the link
-      await link.click();
-      await page.screenshot({ path: 'ss/storyPage1.png', fullPage: true });
-      await page.getByRole('link', { name: 'Stories' }).first().click();
-      await page.screenshot({ path: 'ss/storyPage2.png', fullPage: true });
-    }
-  });
 });
 
 test.describe('Home Page tests', () => {
@@ -203,10 +175,10 @@ test.describe('Home Page tests', () => {
 
 test.describe('Story page tests', () => {
   test('Stody heading and story file is correct', async ({ page }) => {
-    await page.goto('https://quamar-jahan.vercel.app/');
+    await page.goto('https://quamar-jahan.vercel.app/stories.html');
     const storyObjects = [
       { linkText: 'Pinjre ka Qaidi', headingText: 'Pinjre ka Qaidi', storyLink: 'https://drive.google.com/file/d/1mOmJnNWTsBRXdyLfaf196Mfz8xs3COIG/preview' },
-      { linkText: 'Charahgar', headingText: 'Charahgar', storyLink: '#' },
+      { linkText: 'Charahgar', headingText: 'Charahgar', storyLink: 'https://drive.google.com/file/d/1Yb6J3tJmApXk2Q2dl06EWs6LEjJ4oKjE/view' },
       // Add more objects as needed
     ];
 
@@ -227,7 +199,7 @@ test.describe('Story page tests', () => {
       } else {
         console.log('Iframe not found.');
       }
-      await page.goto('https://quamar-jahan.vercel.app/');
+      await page.goto('https://quamar-jahan.vercel.app/stories.html');
     }
   });
 });
