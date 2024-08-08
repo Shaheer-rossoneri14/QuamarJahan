@@ -54,18 +54,18 @@ test.describe('Stories Page tests', () => {
     // Test data
     const expectedCards = [
       {
-        imageUrl: 'images/PinjreKaQaidi1.png',
-        imageLinkHref: 'story1.html',
-        cardTitle: 'Pinjre ka Qaidi',
-        cardTitleHref: 'story1.html',
-        cardContent: 'A collection of short stories published in 2015'
+        imageUrl: 'images/Charahgar2.png',
+        imageLinkHref: 'Charagar.html',
+        cardTitle: 'Charahgar',
+        cardTitleHref: 'Charagar.html',
+        cardContent: 'A collection of short stories published in 1983'
       },
       {
-        imageUrl: 'images/Charahgar2.png',
-        imageLinkHref: 'story2.html',
-        cardTitle: 'Charahgar',
-        cardTitleHref: 'story2.html',
-        cardContent: 'A collection of short stories published in 1983'
+        imageUrl: 'images/PinjreKaQaidi1.png',
+        imageLinkHref: 'PinjreKaQaidi.html',
+        cardTitle: 'Pinjre ka Qaidi',
+        cardTitleHref: 'PinjreKaQaidi.html',
+        cardContent: 'A collection of short stories published in 2015'
       },
       // Add more expected cards as needed
     ];
