@@ -178,7 +178,7 @@ test.describe('Story page tests', () => {
     await page.goto('https://quamar-jahan.vercel.app/stories.html');
     const storyObjects = [
       { linkText: 'Pinjre ka Qaidi', headingText: 'Pinjre ka Qaidi', storyLink: 'https://drive.google.com/file/d/1mOmJnNWTsBRXdyLfaf196Mfz8xs3COIG/preview' },
-      { linkText: 'Charahgar', headingText: 'Charahgar', storyLink: 'https://drive.google.com/file/d/1Yb6J3tJmApXk2Q2dl06EWs6LEjJ4oKjE/view' },
+      { linkText: 'Charagar', headingText: 'Charagar', storyLink: 'https://drive.google.com/file/d/1Yb6J3tJmApXk2Q2dl06EWs6LEjJ4oKjE/view' },
       // Add more objects as needed
     ];
 
